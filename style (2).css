@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, serif;
+
+    /* LIGHT BLUE BACKGROUND */
+    background: linear-gradient(
+        135deg,
+        #cceeff,
+        #eaf8ff
+    );
+
+    color: #3d5360;
+    padding: 20px;
+
+    overflow-x: hidden;
+}
+
+/* Main Letter */
+
+.container {
+    width: 90%;
+    max-width: 650px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    animation: appear 1.5s ease;
+}
+
+/* Opening Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Heart */
+
+.heart {
+    font-size: 55px;
+
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+/* Title */
+
+h1 {
+    color: #d6335c;
+
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button */
+
+button {
+    background: #d6335c;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    background: #b82048;
+}
+
+/* Letter */
+
+#letter {
+    display: none;
+
+    margin-top: 30px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    animation: letterOpen 1.5s ease;
+}
+
+@keyframes letterOpen {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#letter p {
+    margin-bottom: 20px;
+}
+
+/* Ending */
+
+.ending {
+    text-align: center;
+
+    color: #d6335c;
+
+    font-size: 18px;
+}
+
+/* Floating Hearts */
+
+.heart-float {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation: floatUp 6s linear infinite;
+}
+
+.heart-float:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.heart-float:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.heart-float:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.heart-float:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.heart-float:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.7);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.3);
+        opacity: 0;
+    }
+}

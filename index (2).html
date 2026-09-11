@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Darling ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+            color: #5a2633;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts */
+        .heart-float {
+            position: fixed;
+            bottom: -50px;
+            color: #ff6b8a;
+            font-size: 25px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .heart-float:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart-float:nth-child(2) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .heart-float:nth-child(3) {
+            left: 45%;
+            animation-delay: 4s;
+        }
+
+        .heart-float:nth-child(4) {
+            left: 65%;
+            animation-delay: 1s;
+        }
+
+        .heart-float:nth-child(5) {
+            left: 85%;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.7);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+
+            animation: appear 1.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .heart {
+            font-size: 55px;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        h1 {
+            color: #d6335c;
+            animation: fadeIn 2s ease;
+        }
+
+        button {
+            background: #d6335c;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #b82048;
+        }
+
+        #letter {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 16px;
+
+            animation: letterOpen 1.5s ease;
+        }
+
+        @keyframes letterOpen {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #letter p {
+            margin-bottom: 20px;
+        }
+
+        .ending {
+            text-align: center;
+            color: #d6335c;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="heart-float">❤️</div>
+    <div class="heart-float">💗</div>
+    <div class="heart-float">💕</div>
+    <div class="heart-float">💖</div>
+    <div class="heart-float">❤️</div>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>For My Darling</h1>
+
+        <p>There is something I want to tell you...</p>
+
+        <button onclick="openLetter()">
+            Open My Letter 💌
+        </button>
+
+        <div id="letter">
+
+            <p>Halo, baby.</p>
+
+            <p>
+                It was beautiful. Two years tayong magkasama sa lungkot,
+                sa problems, sa saya, at sa mga struggles. Ikaw yung kasama
+                ko sa lahat. Though hindi naging super perfect yung relationship
+                natin, sa buong pagsasama natin, minahal talaga kita. Kahit
+                marami tayong naging problems, ikaw pa rin yung minahal ko.
+                Sobrang dami nating struggles na magkasama nating hinarap.
+                Hindi man natin lahat naayos, kahit papaano, sa ibang struggles
+                natin, nakaya natin.
+            </p>
+
+            <p>
+                I hope u’re doing well, my darling. Gusto ko ma-achieve mo
+                lahat ng pangarap mo. Just always do ur best, okay? u know
+                naman na I am always be the number one person na proud sa’yo
+                sa lahat ng achievements mo, baby ko.
+            </p>
+
+            <p>
+                Lagi mong tatandaan na kahit wala na tayo, mahal na mahal pa
+                rin kita. Kahit wala na tayo, pwede ka pa ring tumakbo sa'kin
+                kapag may problema ka. Meron kang ako, ha? Kahit mawalan ka
+                man ng lahat, always remember that I’m still here for u,
+                no matter what happens. I’m here silently. Hindi mo man ako
+                maramdaman o makita, but once na may problem ka or hindi mo
+                na kinakaya yung struggles mo, u can just message me, okay?
+                I’m always here for u. I always do.
+            </p>
+
+            <p>
+                Minahal kita hindi dahil sa looks mo, at hindi rin dahil mahal
+                mo ako. Minahal kita dahil ikaw yan. Kaya gawin mo lahat ng
+                makakapagpasaya sa'yo ngayon, baby. Ilibang mo yung sarili mo
+                and take care of urself. And about sa nangyari, hinayaan ko na.
+                Hindi na ako magtatanim ng galit sa'yo. Ganito naman ako sayo,
+                baby. Never akong nagtanim ng galit at sama ng loob sayo dahil
+                mahal kita. Pero sana sa bawat pagkakamali mo, maging lesson
+                iyon para sayo. I hope magbago ka na. Baguhin mo na yung mga
+                bagay na hindi dapat ginagawa o hindi magandang gawain, kasi
+                para rin naman sayo iyon.
+            </p>
+
+            <p>
+                Ayokong nakikita kang nahihirapan. Nalulungkot at nasasaktan
+                ako kapag nasasaktan ka rin, lalo na nung times na nag-away
+                kayo. Although may kasalanan ka rin, sobrang nasaktan ako sa
+                nangyari sa'yo noon, baby.
+            </p>
+
+            <p>
+                And about sa mga nasabi ko sa mga kaibigan ko about u, I am
+                deeply sorry. Hindi ko naman talaga intention na magsabi ng
+                kung ano-ano, pero sa sobrang sakit at sama ng loob ko noon,
+                kung ano-ano na yung lumalabas sa chats ko. I’m really sorry
+                for that. Alam kong toxic din yung ginawa kong iyon, and that
+                is also something na babaguhin ko sa sarili ko. I’m sorry if
+                because of my actions, nasaktan din kita.
+            </p>
+
+            <p>
+                Lagi kitang pinagpe-pray na sana palagi kang nasa maayos na
+                kalagayan at hindi ka nalulungkot. That’s real, baby.
+                Pinagpe-pray talaga kita lagi. Kasama ka palagi sa prayers ko.
+                I pray na sana ma-achieve mo lahat ng pangarap mo. I know na
+                kayang-kaya mo yan, baby. Walang problemang hindi mo kayang
+                lampasan. Alam kong matapang ka, malakas ka, at matalino ka,
+                mahal ko. Kaya sana ang gusto ko sa'yo ngayon is maging mas
+                mature ka na. Para wala na rin tayong masaktan na ibang tao.
+                Hindi na tayo bata para gawing laro ang isang relationship.
+            </p>
+
+            <p>
+                Sana yung naging relationship natin maging lesson lahat sa'yo,
+                baby. Siguro kaya tayo pinagtagpo para maging lesson sa ating
+                dalawa lahat ng nangyari sa atin. Para sa susunod na makilala
+                mo, alam mo na kung ano yung tama at mali, at alam mo na rin
+                kung ano yung dapat mong iwasan. Ako, marami rin akong lessons
+                na nakuha sa relationship natin. Hindi ka nag-iisa, ha? Lagi
+                mong tatandaan iyon. Iwan ka man ng lahat, I promise na
+                nandito lang ako para sa'yo.
+            </p>
+
+            <p>
+                I wanna hug you and kiss u, baby. Mamimiss ko yung mga hugs
+                and kisses natin. Mamimiss ko lahat ng bonding nating dalawa.
+                Yung pagluluto natin ng madaling araw, pagkain natin sa labas,
+                mga paggagala natin, at yung pagsabay nating maligo. Lahat
+                ng memories natin, mamimiss ko.
+            </p>
+
+            <p>
+                Someday, kapag successful na ako, babalikan kita. Hahanapin
+                kita. I will never ever stop loving u. Gusto ko ikaw. Walang
+                iba. Hahanapin kita kapag successful na ako, at lahat ng
+                pagkukulang ko sa'yo ngayon, ifufulfill ko sa'yo balang araw.
+                Unless kung magkakaroon ka na ng bago. Palagi kang magdasal,
+                baby, ha? Huwag na huwag mong kakalimutan ang mag-pray palagi.
+                Kapag nahihirapan ka, kausapin mo si Lord. Lagi mong tatandaan
+                na hindi ka nag-iisa.
+            </p>
+
+            <p>
+                Thank you for the two beautiful years, baby. Thank you for
+                all the memories, the laughs, the struggles, the love, and
+                everything we shared.
+            </p>
+
+            <p class="ending">
+                I loved you, I love you, and a part of me will always love you.
+                <br><br>
+                Take care always, my darling. I’m always proud of you.
+                <br><br>
+                I love you so much, my future nurse. ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById("letter").style.display = "block";
+            document.querySelector("button").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
